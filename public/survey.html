@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Survey</title>
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Survey Questions</h1>
+      <hr />
+      <h3><strong>About You</strong></h3>
+      <form>
+        Name (Required)<br />
+        <input type="text" id="name" class="form-control" />
+        <br />
+        Link to Photo Image (Required)<br />
+        <input type="text" id="photo" class="form-control" />
+        <hr>
+      </hr>
+        <h4>Question 1</h4>
+        <h5>You enjoy a day to day routine</h5>
+            <select name="question" id="q1">
+              <option value="one">1 (Strongly Agree)</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5 (Strongly Disagree)</option>
+            </select>
+            <br><br>
+            <h4>Question 2</h4>
+            <h5>You could see yourself move to a different state</h5>
+            <select name="question" id="q2">
+              <option value="one">1 (Strongly Agree)</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5 (Strongly Disagree)</option>
+            </select>
+            <br><br>
+            <h4>Question 3</h4>
+            <h5>You could see yourself moving to a different country</h5>
+            <select name="question" id="q3">
+              <option value="one">1 (Strongly Agree)</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5 (Strongly Disagree)</option>
+            </select>
+            <br><br>
+            <h4>Question 4</h4>
+            <h5>You are outgoing and love to try new things</h5>
+            <select name="question" id="q4">
+              <option value="one">1 (Strongly Agree)</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5 (Strongly Disagree)</option>
+            </select>
+            <br><br>
+            <h4>Question 5</h4>
+            <h5>You enjoy meeting new people and opening up your friend circle</h5>
+            <select name="question" id="q5">
+              <option value="one">1 (Strongly Agree)</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5 (Strongly Disagree)</option>
+            </select>
+            <br><br>
+            <h4>Question 6</h4>
+            <h5>You enjoy trying new foods of any kind</h5>
+            <select name="question" id="q6">
+              <option value="one">1 (Strongly Agree)</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5 (Strongly Disagree)</option>
+            </select>
+            <br><br>
+            <h4>Question 7</h4>
+            <h5>You feel more energetic after doing some sort of physical activity</h5>
+            <select name="question" id="q7">
+              <option value="one">1 (Strongly Agree)</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5 (Strongly Disagree)</option>
+            </select>
+            <br><br>
+            <h4>Question 8</h4>
+            <h5>You love to be outdoors and enjoy hiking</h5>
+            <select name="question" id="q8">
+              <option value="one">1 (Strongly Agree)</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5 (Strongly Disagree)</option>
+            </select>
+            <br><br>
+            <h4>Question 9</h4>
+            <h5>You enjoy coding when your code works the first time</h5>
+            <select name="question" id="q9">
+              <option value="one">1 (Strongly Agree)</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5 (Strongly Disagree)</option>
+            </select>
+            <br><br>
+            <h4>Question 10</h4>
+            <h5>You live a healthy lifestyle</h5>
+            <select name="question" id="q10">
+              <option value="one">1 (Strongly Agree)</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5 (Strongly Disagree)</option>
+            </select>
+            <br><br>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"></i> Submit</button>
+      </form>
+      <hr>
+      <a href="/api/friends">API Friends List</a> |
+      <a href="https://github.com/AaronGonzo/FriendFinder">Github Repo</a>
+      <br>
+      <br>
+      </div>
+    </div>
+      <!-- Modal -->
+  <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+  $("#submit").on("click", function(event){
+    event.preventDefault();
+  });
+  var userData = {
+    name:$("#name").val(),
+    photo: $("#photo").val(),
+    scores: [
+      $("#q1").val(),
+      $("#q2").val(),
+      $("#q3").val(),
+      $("#q4").val(),
+      $("#q5").val(),
+      $("#q6").val(),
+      $("#q7").val(),
+      $("#q8").val(),
+      $("#q9").val(),
+      $("#q10").val()
+    ]
+  };
+  $.post("/api/survey", userData, function(data){
+    $("#match-name").text(data.name);
+    $("#match-img").attr("src", data.photo);
+    $("#results-modal").modal("toggle");
+  });
+  
+  
+  
+  </script>
+  </body>
+</html>
