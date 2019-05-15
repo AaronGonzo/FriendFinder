@@ -17,7 +17,7 @@ module.exports = function(app) {
     for (var i = 0; i < friendsData.length; i++) {
       var currentFriend = friendsData[i];
       totalDiff = 0;
-      for (var j = 0; j < currentFriend.scores.length; i++) {
+      for (var j = 0; j < currentFriend.scores.length; j++) {
         var currentFriendScore = currentFriend.scores[j]; //5 4
         var currentUserScore = userScores[j]; //3 2
         totalDiff += Math.abs(currentUserScore - currentFriendScore); //0+(2)=2 2+(4-2)=4
